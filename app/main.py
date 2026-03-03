@@ -23,15 +23,18 @@ def battle(knights: dict) -> dict:
     mordred = knights["mordred"]
     red_knight = knights["red_knight"]
 
-#----------------------------------------------------------------------
     # BATTLE:
 
     # 1 Lancelot vs Mordred:
-    lancelot_vs_mordred = Battle(lancelot.prepare_battle(), mordred.prepare_battle())
+    lancelot_vs_mordred = Battle(
+        lancelot.prepare_battle(), mordred.prepare_battle()
+    )
     battle_results.update(lancelot_vs_mordred.start_battle())
 
     # 2 Arthur vs Red Knight:
-    arthur_vs_red_knight = Battle(arthur.prepare_battle(), red_knight.prepare_battle())
+    arthur_vs_red_knight = Battle(
+        arthur.prepare_battle(), red_knight.prepare_battle()
+    )
     battle_results.update(arthur_vs_red_knight.start_battle())
 
     # Return battle results:
@@ -39,5 +42,3 @@ def battle(knights: dict) -> dict:
 
 
 print(battle(dict_of_knights))
-
-

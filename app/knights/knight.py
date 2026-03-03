@@ -21,9 +21,10 @@ class Knight:
         self.weapon = weapon
         self.potion = potion
 
-
     def apply_armour(self) -> Knight:
-        self.protection += sum([armour["protection"] for armour in self.armour])
+        self.protection += sum(
+            [armour["protection"] for armour in self.armour]
+        )
         return self
 
     def apply_weapon(self) -> Knight:

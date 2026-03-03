@@ -2,7 +2,7 @@ from app.knights.knight import Knight
 
 
 class Battle:
-    def __init__(self, knight_1: Knight, knight_2: Knight):
+    def __init__(self, knight_1: Knight, knight_2: Knight) -> None:
         self.knight_1 = knight_1
         self.knight_2 = knight_2
 
@@ -18,5 +18,3 @@ class Battle:
             self.knight_1.name: self.knight_1.hp,
             self.knight_2.name: self.knight_2.hp
         }
-
-
